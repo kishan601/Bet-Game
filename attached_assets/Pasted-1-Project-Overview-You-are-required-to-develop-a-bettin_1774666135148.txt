@@ -1,0 +1,177 @@
+1. Project Overview
+You are required to develop a betting-based card matching web
+application. The platform will allow users to place bets, play a
+number-matching game, and win rewards based on outcomes.
+The application will include frontend (React.js), backend (Node.js),
+and database (MongoDB) integration along with proper game logic
+and user management.
+
+2. Game Functionality
+Game Structure
+● Total 10 cards displayed on screen
+● Arranged in 2 rows (5 cards each)
+Card Logic
+● Each card contains a random number
+● Example:
+○ Row 1: 23, 45, 67, 98, 90
+○ Row 2: 67, 98, 23, 90, 45
+
+Gameplay Rules
+● When user clicks on cards:
+○ Numbers will shuffle/switch randomly
+○ This prevents cheating
+● If numbers match between rows:
+○ Cards will remain open
+
+● If not matched:
+○ Cards will close again
+● A timer-based switching system should be implemented to
+ensure fairness
+
+3. Betting System
+Bet Rules
+● User can place bets before starting the game
+● Example:
+○ ₹10 bet → ₹30 return
+○ ₹20 bet → ₹60 return
+
+Constraints
+● Maximum bet limit: ₹5000
+● Winning amount should be calculated dynamically
+
+4. User Features
+Authentication
+● User Signup/Login system
+Wallet System
+● User can:
+○ Add money
+○ View balance
+○ Use balance to play game
+
+Payment
+● Payment via scanner/manual method (no Razorpay required)
+Withdrawal
+
+● User can request withdrawal
+● Withdrawal amount deducted from wallet
+
+5. Admin Panel
+Admin Features
+● View all users
+● Track:
+○ User details
+○ Total deposited amount
+○ Wallet balance
+● Ability to:
+○ Manage user data
+○ Adjust balances if needed
+
+6. Backend Requirements
+● Technology: Node.js
+● Database: MongoDB
+● Features:
+○ API for user authentication
+○ Wallet management APIs
+○ Game logic handling
+○ Bet calculation logic
+
+7. Frontend Requirements
+● Technology: React.js
+● Features:
+○ Responsive UI
+○ Game interface (cards UI like reference)
+○ Wallet dashboard
+
+○ Login/Register pages
+● Styling:
+○ Clean, modern UI
+○ Smooth animations for card flip/open
+
+8. Additional Integrations
+● MongoDB connection (credentials will be provided via email)
+● EmailJS integration:
+○ Use where necessary (notifications, alerts, etc.)
+
+9. Git & Deployment
+● Git access will be provided
+● Code should be:
+○ Clean and structured
+○ Properly documented
+● Deployment optional (if required)
+
+10. Important Notes
+● Game logic must be fair and optimized
+● Avoid cheating possibilities
+● Maintain clean code structure
+● Proper use of functions and logic in JavaScript
+
+11. Submission Requirements
+● Complete source code (Git)
+● Working application
+● Proper functionality of:
+
+○ Game logic
+○ Betting system
+○ Wallet system
+○ Admin panel
+
+Game Logic (Important Section – Must Follow)
+Number Distribution
+● Total 10 cards (2 rows × 5 cards)
+● Each row will contain unique numbers (no duplicates within
+same row)
+● Both rows will contain same set of numbers, but in different
+order
+Example:
+● Row 1: 23, 45, 67, 98, 90
+● Row 2: 67, 98, 23, 90, 45
+
+Card Click Behavior
+● When user clicks on a card:
+○ The number is revealed
+● User selects one card from Row 1 and one from Row 2
+
+Matching Logic
+● If both selected cards have same number:
+○ Cards will remain open (matched)
+● If numbers do not match:
+○ Cards will close again
+
+Dynamic Number Switching (Anti-Cheat Logic) ⚠️
+To prevent cheating, implement the following:
+● After every card interaction:
+○ Numbers in cards should shuffle/switch positions
+dynamically
+
+● Example:
+○ User clicks and identifies 98
+○ On next click → 98 should move to a different position
+● This ensures:
+○ User cannot memorize positions
+
+Important Rules
+● Numbers must NOT repeat within the same row
+● Numbers must be same in both rows (for matching purpose)
+● Positions must change dynamically after interactions
+
+Session Behavior
+● If user continues playing:
+○ Numbers keep switching dynamically
+● If user refreshes:
+○ Generate completely new random numbers
+
+Timer Logic
+● Implement auto-switch/shuffle mechanism
+● Even if user is inactive:
+○ Numbers should keep changing at intervals
+● This ensures fair gameplay
+
+Note :
+1. Do not use EmailJS integration in this project.
+2. Git repository access will be provided. You must work on the given repository and
+maintain proper code structure.
+3. You are required to use the MongoDB credentials provided by me. Please make
+sure to log in and configure the backend using my email ID only. Do not create or
+use any personal MongoDB account for this project.
+4.The website must be fully responsive and should work smoothly across all devices,
+including mobile, tablet, and desktop screens.
