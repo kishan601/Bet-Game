@@ -168,7 +168,7 @@ BettingApp/
 ### Prerequisites
 
 * Node.js
-* MongoDB
+* PostgreSQL/Neon
 * Confidence (optional, will be reduced anyway)
 
 ---
